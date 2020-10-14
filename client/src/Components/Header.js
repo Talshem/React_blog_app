@@ -3,7 +3,7 @@ import React from 'react'
 function Header() {
     return (
         <div className="header">
-T H E  &nbsp;  B L O G   
+W H I S P E R I N G &nbsp; B A T T L E &nbsp; & &nbsp; L E G A C Y
         </div>
     )
 }

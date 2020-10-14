@@ -68,18 +68,21 @@ key={generator.generate({
 })}
 comment={element}
 />
-
 })}
 
+<br/>
 <hr style={{marginBottom:"100px"}}/>
 
-<h2 style={{color:"rgb(50, 50, 50)"}}>New Comment</h2> 
+<h2 style={{color:"rgb(50, 50, 50)"}}>
+<i className="fa fa-comment"></i> New Comment
+</h2> 
 
    <form className="postComment" ref={form} onSubmit={handleSubmit(onSubmit)}>
-      <textarea required className="inputTitle" onKeyPress={(e) => { e.key === 'Enter' && e.preventDefault()}} onKeyUp={handleFocus} name="title" ref={register} />
-      <textarea rows="10" className="inputContent" name="content" ref={mergeRefs([register, contentInput])} />
+      <textarea placeholder="title..." rows="1" maxLength="100" required className="inputTitle" onKeyPress={(e) => { e.key === 'Enter' && e.preventDefault()}} onKeyUp={handleFocus} name="title" ref={register} />
+      <textarea placeholder="content..." rows="10" className="inputContent" name="content" ref={mergeRefs([register, contentInput])} />
       <input className="submitButton" type="submit" />
     </form>
+    <br/>
     <button onClick={() => {setError(true)}}>Error</button>
         </div>
     )

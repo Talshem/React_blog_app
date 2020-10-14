@@ -23,13 +23,13 @@ setData(res.data)
   return (
     <>
     <Header/>
-    <div style={{paddingLeft:"150px", width:"850px"}}>
+    <div style={{paddingLeft:"150px", width:"850px", marginBottom:"200px", marginTop:"120px"}}>
     <Suspense fallback={<div>Loading article...</div>}>
     <Article/>
     </Suspense>
     <Suspense fallback={<div>Loading comments...</div>}>
    <ErrorBoundary>
-    <Form data={data}/>
+    {data && <Form data={data}/>}
    </ErrorBoundary>
     </Suspense>
     </div>

@@ -11,10 +11,10 @@ This Week in Israeli History: Joseph Trumpeldor and the Battle of Tel Hai
 By Eytan Meir, March 2, 2016 16:37 | The Jerusalem Post  
 </h4>
 
-<img src="https://images.jpost.com/image/upload/f_auto,fl_lossy/t_JD_ArticleMainImageFaceDetect/454889"/>
-<span>
+<img src="https://images.jpost.com/image/upload/f_auto,fl_lossy/t_JD_ArticleMainImageFaceDetect/454889" alt='"The Roaring Lion" at Tel Hai.' />
+<p style={{textAlign:"center", marginTop:"0"}}>
 Photo credit: Wikimedia Commons   
-</span>
+</p>
 
 
 <p>
