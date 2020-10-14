@@ -44,7 +44,7 @@ const form = useRef();
 
 const onSubmit = async ({ title, content }) => {
 let date = new Date().toDateString() + ", " + new Date().toLocaleString().substr(12, 11)
-await axios.post('/post', {
+await axios.post('/api/post', {
 title, content, date
 })
 dispatch({type:ACTIONS.ADD, payload: {title, content, date}});

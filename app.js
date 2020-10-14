@@ -16,7 +16,7 @@ const errorHandler = (error, request, response, next) => {
 }
 
 app.use(errorHandler)
-app.use('/', require('./api'));
+app.use('/api/', require('./api'));
 
 
 module.exports = app

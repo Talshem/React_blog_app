@@ -12,7 +12,7 @@ const [data, setData] = useState(null)
 
 useEffect(() => {
 const fetchData = async () => {
-await axios.get('/get')
+await axios.get('/api/get')
 .then((res) => {
 setData(res.data)
 })
