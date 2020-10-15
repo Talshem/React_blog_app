@@ -1,6 +1,9 @@
-import React from 'react'
+import React, {useState} from 'react'
 
 function Comment({comment}) {
+const [content, setContent] = useState(null)
+
+
     return (
 
 <details className="commentBody">
@@ -11,7 +14,12 @@ function Comment({comment}) {
 </strong>
 </summary>
 <div>
-{comment.content}
+{comment.content.split("&&").map(function(item, index) {
+        return (
+            <span key={index}>
+                {item}
+                <br/>
+            </span>)})}
 </div>   
 </details>
     )

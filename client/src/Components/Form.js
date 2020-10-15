@@ -1,7 +1,6 @@
 
 import React, {useReducer, useRef, useEffect, useState} from 'react'
 import { useForm } from 'react-hook-form';
-import generator from 'generate-password'
 import Comment from './Comment.js'
 import mergeRefs from "react-merge-refs";
 import axios from 'axios'
@@ -43,6 +42,8 @@ const contentInput = useRef();
 const form = useRef();
 
 const onSubmit = async ({ title, content }) => {
+content = content.replace(/\r?\n/g, '&&');
+console.log(content)
 let date = new Date().toDateString() + ", " + new Date().toLocaleString().substr(12, 11)
 await axios.post('/api/post', {
 title, content, date
@@ -62,10 +63,7 @@ form.current.reset();
 <h2 className="commentsTitle">Comments:</h2> 
 {comment.map(element => {
 return <Comment 
-key={generator.generate({
-    length: 10,
-    numbers: true
-})}
+key={comment.indexOf(element)}
 comment={element}
 />
 })}
